@@ -1,5 +1,11 @@
 # Estación Didáctica de Bajo Costo para Seguimiento Solar y Adquisición de Datos Meteorológicos
+# Estación Didáctica de Bajo Costo para Seguimiento Solar y Adquisición de Datos Meteorológicos
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Hardware: Arduino](https://img.shields.io/badge/Hardware-Arduino-00979D.svg)
+![Language: C++](https://img.shields.io/badge/Language-C++-00599C.svg)
+![Status: Completed](https://img.shields.io/badge/Status-Completed-success.svg)
+![Location: Suchiapa, Chiapas](https://img.shields.io/badge/Location-Suchiapa%2C%20Chiapas-orange.svg)
 ## 📌 Descripción
 Este proyecto presenta el desarrollo de un prototipo de seguidor solar monaxial de bajo costo. El sistema no solo optimiza la captación fotovoltaica mediante un control de lazo cerrado, sino que funciona como una estación de adquisición de datos (Datalogger) para variables críticas como temperatura, humedad, irradiancia y corriente generada.
 
