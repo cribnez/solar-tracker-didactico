@@ -18,8 +18,8 @@ Este proyecto presenta el desarrollo de un prototipo de seguidor solar monaxial 
 A continuación, se presentan las evidencias del diseño, ensamblaje y emplazamiento del hardware utilizado para la experimentación en campo:
 
 <p align="center">
-  <img src="images/prototipo_estructura_mecanismo.png" width="18%" alt="Estructura y emplazamiento exterior" />
-  <img src="images/prototipo_vista_superior.png" width="31%" alt="Vista superior LDRs y mecanismo" />
+  <img src="images/prototipo_estructura_mecanismo.png" width="17%" alt="Estructura y emplazamiento exterior" />
+  <img src="images/prototipo_vista_superior.png" width="32%" alt="Vista superior LDRs y mecanismo" />
   <img src="images/hardware_electronica_sd.png" width="30%" alt="Electrónica de control y Datalogger" />
 </p>
 <p align="center">
