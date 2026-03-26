@@ -32,14 +32,15 @@ El sistema utiliza un algoritmo de control que procesa señales analógicas, apl
 
 ```mermaid
 graph LR
-    A([Inicio]) --> B[Lectura LDRs]
-    B --> C[Normalización]
-    C --> D{¿Error > Tol?}
-    D -- Sí --> E[Ajustar Servo]
-    D -- No --> G[Filtrado Corriente]
-    E --> G
-    G --> H{¿5 min?}
-    H -- Sí --> I[Guardar SD]
+    A([Inicio]) --> B[Lectura de Sensores LDR1 y LDR2]
+    B --> C[Normalización de señales]
+    C --> D{¿Diferencia > Umbral?}
+    D -- Sí --> E[Ajustar posición del Servomotor]
+    D -- No --> F[Mantener posición actual]
+    E --> G[Medición de Corriente con Filtro]
+    F --> G
+    G --> H{¿Intervalo 5 min?}
+    H -- Sí --> I[Registrar datos en Micro SD]
     H -- No --> B
     I --> B
 ```
