@@ -1,36 +1,28 @@
 # Estación Didáctica de Bajo Costo para Seguimiento Solar y Adquisición de Datos Meteorológicos
 
 ## 📌 Descripción
-Este proyecto desarrolla un prototipo de seguidor solar de bajo costo con capacidad de adquisición de datos meteorológicos.  
-El objetivo es analizar la eficiencia de un panel fotovoltaico a pequeña escala al incorporar seguimiento solar y registrar variables ambientales para su posterior análisis.
+Este proyecto presenta el desarrollo de un prototipo de seguidor solar monaxial de bajo costo. El sistema no solo optimiza la captación fotovoltaica mediante un control de lazo cerrado, sino que funciona como una estación de adquisición de datos (Datalogger) para variables críticas como temperatura, humedad, irradiancia y corriente generada.
 
 ## 🎯 Objetivos
-- Implementar un sistema de seguimiento solar en un eje.
-- Integrar sensores de irradiancia, temperatura y corriente.
-- Diseñar un sistema de adquisición de datos accesible y replicable.
-- Validar el impacto del seguimiento solar en la eficiencia fotovoltaica.
+- Implementar un sistema de seguimiento solar en un eje con control de lazo cerrado.
+- Integrar sensores de irradiancia (LDR), temperatura/humedad (DHT11) y corriente (ACS712).
+- Diseñar un sistema de adquisición de datos no bloqueante y replicable.
+- Validar experimentalmente el incremento de eficiencia frente a sistemas estáticos en Suchiapa, Chiapas.
 
-## 🛠️ Tecnologías utilizadas
-- Arduino UNO / Nano
-- Sensores LDR
-- Sensor de corriente ACS712
-- Servomotor SG90
-- Módulo SD para almacenamiento
-- MATLAB para modelado y análisis
+## ⚙️ Lógica del Algoritmo
+El sistema utiliza un algoritmo de control que procesa señales analógicas, aplica un filtro de sobremuestreo estadístico para la corriente y gestiona el almacenamiento en SD cada 5 minutos.
 
-## 📂 Estructura del repositorio
-- `docs/` Documentación y artículos.
-- `hardware/` Diagramas eléctricos y lista de materiales.
-- `software/` Código fuente.
-- `data/` Archivos de adquisición de datos.
-- `images/` Fotografías y diagramas.
-- `presentations/` Material de difusión.
-
-## 👥 Autores
-- César Emmanuel Llaven Ovilla – Universidad Politécnica de Chiapas
-- Samuel Coello García – Universidad Politécnica de Chiapas
-- Alejandro Medina Santiago – INAOE
-- Christian Roberto Ibáñez Nangüelú – Universidad Politécnica de Chiapas
-
-## 📜 Licencia
-Este proyecto se distribuye bajo la licencia MIT para fomentar su uso académico y comunitario.
+```mermaid
+graph TD
+    A([Inicio]) --> B[Lectura de Sensores LDR1 y LDR2]
+    B --> C[Normalización de señales - map/constrain]
+    C --> D{¿Diferencia > Umbral?}
+    D -- Sí --> E[Ajustar posición del Servomotor]
+    D -- No --> F[Mantener posición actual]
+    E --> G[Medición de Corriente con Filtro 500 muestras]
+    F --> G
+    G --> H{¿Intervalo 5 min?}
+    H -- Sí --> I[Registrar datos en Micro SD]
+    H -- No --> B
+    I --> B
+```
