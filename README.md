@@ -14,6 +14,18 @@ Este proyecto presenta el desarrollo de un prototipo de seguidor solar monaxial 
 - Diseñar un sistema de adquisición de datos no bloqueante y replicable.
 - Validar experimentalmente el incremento de eficiencia frente a sistemas estáticos en Suchiapa, Chiapas.
 
+## 🏗️ Prototipo Físico y Hardware
+A continuación, se presentan las evidencias del diseño, ensamblaje y emplazamiento del hardware utilizado para la experimentación en campo:
+
+<p align="center">
+  <img src="images/prototipo_estructura_mecanismo.png" width="30%" alt="Estructura y emplazamiento exterior" />
+  <img src="images/prototipo_vista_superior.png" width="30%" alt="Vista superior LDRs y mecanismo" />
+  <img src="images/hardware_electronica_sd.png" width="30%" alt="Electrónica de control y Datalogger" />
+</p>
+<p align="center">
+  <em>De izquierda a derecha: 1) Prototipo emplazado para pruebas de campo, 2) Vista superior del panel y distribución de LDRs, 3) Circuito de control con módulo SD para el Datalogger.</em>
+</p>
+
 ## ⚙️ Lógica del Algoritmo
 El sistema utiliza un algoritmo de control que procesa señales analógicas, aplica un filtro de sobremuestreo estadístico para la corriente y gestiona el almacenamiento en SD cada 5 minutos.
 
