@@ -1,5 +1,4 @@
 # Estación Didáctica de Bajo Costo para Seguimiento Solar y Adquisición de Datos Meteorológicos
-# Estación Didáctica de Bajo Costo para Seguimiento Solar y Adquisición de Datos Meteorológicos
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Hardware: Arduino](https://img.shields.io/badge/Hardware-Arduino-00979D.svg)
