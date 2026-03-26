@@ -13,16 +13,15 @@ Este proyecto presenta el desarrollo de un prototipo de seguidor solar monaxial 
 El sistema utiliza un algoritmo de control que procesa señales analógicas, aplica un filtro de sobremuestreo estadístico para la corriente y gestiona el almacenamiento en SD cada 5 minutos.
 
 ```mermaid
-graph TD
-    A([Inicio]) --> B[Lectura de Sensores LDR1 y LDR2]
-    B --> C[Normalización de señales - map/constrain]
-    C --> D{¿Diferencia > Umbral?}
-    D -- Sí --> E[Ajustar posición del Servomotor]
-    D -- No --> F[Mantener posición actual]
-    E --> G[Medición de Corriente con Filtro 500 muestras]
-    F --> G
-    G --> H{¿Intervalo 5 min?}
-    H -- Sí --> I[Registrar datos en Micro SD]
+graph LR
+    A([Inicio]) --> B[Lectura LDRs]
+    B --> C[Normalización]
+    C --> D{¿Error > Tol?}
+    D -- Sí --> E[Ajustar Servo]
+    D -- No --> G[Filtrado Corriente]
+    E --> G
+    G --> H{¿5 min?}
+    H -- Sí --> I[Guardar SD]
     H -- No --> B
     I --> B
 ```
