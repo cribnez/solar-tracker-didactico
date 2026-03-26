@@ -61,6 +61,14 @@ A continuación, se presenta una comparativa del rendimiento obtenida durante la
 - **Almacenamiento:** Módulo Micro SD (SPI).
 - **Software:** C++ (Arduino IDE), MATLAB (Análisis de datos).
 
+## ⚙️ Instalación y Dependencias
+Para compilar y cargar el código en el microcontrolador, asegúrate de tener instaladas las siguientes librerías en tu **Arduino IDE**:
+
+1. **Servo.h**: (Incluida por defecto en Arduino).
+2. **SD.h** y **SPI.h**: (Incluidas por defecto en Arduino).
+3. **DHT sensor library** (por Adafruit): Versión 1.4.x o superior.
+4. **Adafruit Unified Sensor** (Dependencia necesaria para el DHT).
+
 ## 📂 Estructura del repositorio
 - `docs/`: Artículos científicos y documentación técnica.
 - `hardware/`: Diagramas eléctricos y lista de materiales.
