@@ -26,6 +26,7 @@ A continuación, se presentan las evidencias del diseño, ensamblaje y emplazami
   <em>De izquierda a derecha: 1) Prototipo emplazado para pruebas de campo, 2) Vista superior del panel y distribución de LDRs, 3) Circuito de control con módulo SD para el Datalogger.</em>
 </p>
 
+
 ## ⚙️ Lógica del Algoritmo
 El sistema utiliza un algoritmo de control que procesa señales analógicas, aplica un filtro de sobremuestreo estadístico para la corriente y gestiona el almacenamiento en SD cada 5 minutos.
 
